@@ -1,0 +1,1157 @@
+/* ==========================================================================
+   1. RESET & THIẾT LẬP CƠ BẢN
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f4f3ed;
+  color: #252d28;
+  font-family: "Inter", sans-serif;
+  line-height: 1.68;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+dl {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section {
+  padding: 120px 0;
+  border-top: 1px solid #dcd7cb;
+}
+
+.section-index {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #87917a;
+  margin-bottom: 18px;
+}
+
+.section-heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+}
+
+.section-heading em {
+  font-style: italic;
+  font-weight: 400;
+  color: #87917a;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background-color: #f4f3ed;
+  border-bottom: 1px solid #dcd7cb;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.brand {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.brand span {
+  color: #87917a;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-item {
+  display: inline-block;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #252d28;
+  padding: 6px 6px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.nav-item:hover {
+  background-color: #eae6dc;
+  color: #535d48;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 18px;
+  background-color: #87917a;
+  color: #ffffff;
+  border-radius: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+}
+
+.btn-cv:hover {
+  background-color: #6e7862;
+}
+
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #252d28;
+  margin-left: auto;
+}
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
+.hero {
+  padding: 88px 0 124px;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 72px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #87917a;
+  margin-bottom: 18px;
+}
+
+.hero-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.hero-name em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-name span {
+  color: #87917a;
+}
+
+.hero-tagline {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #252d28;
+  margin-bottom: 20px;
+}
+
+.hero-summary {
+  max-width: 470px;
+  font-size: 15.5px;
+  color: #5c655f;
+  margin-bottom: 38px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.action-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 26px;
+  background-color: #87917a;
+  color: #ffffff;
+  border-radius: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+}
+
+.action-primary:hover {
+  background-color: #6e7862;
+}
+
+.action-secondary {
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #252d28;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #b9bcaf;
+  transition: all 0.25s ease;
+}
+
+.action-secondary:hover {
+  color: #87917a;
+  border-color: #87917a;
+}
+
+.hero-portrait {
+  max-width: 390px;
+  width: 100%;
+  justify-self: end;
+}
+
+.portrait-frame {
+  height: 480px;
+  background-color: #e5e1d7;
+  border: 1px solid #dcd7cb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portrait-caption {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #5c655f;
+}
+
+/* ==========================================================================
+   4. ABOUT SECTION
+   ========================================================================== */
+.about-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.pull-quote {
+  margin-top: 32px;
+  padding-left: 20px;
+  border-left: 2px solid #87917a;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #252d28;
+}
+
+.lead-paragraph {
+  font-size: 17px;
+  color: #252d28;
+  margin-bottom: 20px;
+}
+
+.body-paragraph {
+  font-size: 15.5px;
+  color: #5c655f;
+  margin-bottom: 36px;
+}
+
+.facts-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid #dcd7cb;
+  border-bottom: 1px solid #dcd7cb;
+  margin-bottom: 28px;
+}
+
+.facts-strip dt {
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #87917a;
+  margin-bottom: 6px;
+}
+
+.facts-strip dd {
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.inline-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #87917a;
+  transition: color 0.25s ease;
+}
+
+.inline-link:hover {
+  color: #252d28;
+}
+
+/* ==========================================================================
+   5. SKILLS SECTION
+   ========================================================================== */
+.skills-intro {
+  margin-bottom: 56px;
+}
+
+.skills-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+.skill-block-head {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #252d28;
+  margin-bottom: 8px;
+}
+
+.skill-block-head h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.skill-block-head span {
+  font-size: 13.5px;
+  color: #5c655f;
+}
+
+.ledger-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid #dcd7cb;
+}
+
+.ledger-title {
+  font-weight: 500;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.ledger-note {
+  font-size: 13.5px;
+  color: #5c655f;
+  text-align: right;
+}
+
+/* ==========================================================================
+   6. WORKS SECTION
+   ========================================================================== */
+.works-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-tab {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #dcd7cb;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5c655f;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filter-tab:hover {
+  border-color: #87917a;
+  color: #252d28;
+}
+
+.filter-tab.is-active {
+  background-color: #87917a;
+  border-color: #87917a;
+  color: #ffffff;
+}
+
+.works-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #dcd7cb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.work-item:hover {
+  border-color: #87917a;
+}
+
+.work-item.is-hidden {
+  display: none;
+}
+
+.work-lead {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.works-secondary-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.work-media {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 110px;
+  min-height: 220px;
+  background-color: var(--bg-media);
+  overflow: hidden;
+}
+
+.work-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  display: block;
+}
+
+.work-plate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  border-left: 1px solid var(--border-color);
+  background-color: var(--bg-media);
+}
+
+.work-compact {
+  min-height: 220px;
+  border-right: none;
+  border-bottom: 1px solid #dcd7cb;
+}
+
+.work-plate {
+  text-align: center;
+}
+
+.plate-number {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 36px;
+  color: #87917a;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.plate-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #5c655f;
+}
+
+.work-content {
+  flex: 1;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.work-meta {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #87917a;
+  margin-bottom: 10px;
+}
+
+.work-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.28;
+  margin-bottom: 14px;
+}
+
+.work-excerpt {
+  font-size: 14.5px;
+  color: #5c655f;
+  margin-bottom: 24px;
+}
+
+.work-trigger {
+  align-self: flex-start;
+  font-family: "Manrope", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #252d28;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #87917a;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.work-trigger:hover {
+  color: #87917a;
+}
+.work-role {
+  font-size: 14px;
+  color: #5c655f;
+  margin-bottom: 24px;
+}
+
+.work-actions {
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.work-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #f4f3ed;
+  border: 1px solid #87917a;
+  border-radius: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #252d28;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.work-link:hover {
+  background-color: #87917a;
+  border-color: #87917a;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   7. JOURNEY SECTION
+   ========================================================================== */
+.journey-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.journey-sticky {
+  position: sticky;
+  top: 112px;
+}
+
+.journey-note {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #5c655f;
+  max-width: 300px;
+}
+
+.timeline-stream {
+  border-left: 1px solid #87917a;
+  padding-left: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.milestone {
+  position: relative;
+}
+
+.milestone::before {
+  content: "";
+  position: absolute;
+  left: -41px;
+  top: 7px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #87917a;
+}
+
+.milestone-period {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #87917a;
+  margin-bottom: 8px;
+}
+
+.milestone-detail h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.milestone-org {
+  font-size: 14px;
+  font-weight: 500;
+  color: #252d28;
+  margin-bottom: 12px;
+}
+
+.milestone-detail p:last-child {
+  font-size: 15px;
+  color: #5c655f;
+}
+
+/* ==========================================================================
+   8. CONTACT SECTION
+   ========================================================================== */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.contact-lead {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 15.5px;
+  color: #5c655f;
+  max-width: 420px;
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 28px;
+  border-top: 1px solid #dcd7cb;
+}
+
+.channel-label {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #87917a;
+  margin-bottom: 6px;
+}
+
+.channel-link,
+.channel-links-row a {
+  font-family: "Manrope", sans-serif;
+  font-size: 15.5px;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.channel-link:hover,
+.channel-links-row a:hover {
+  color: #87917a;
+}
+
+.channel-links-row {
+  display: flex;
+  gap: 24px;
+}
+
+.contact-form {
+  background-color: #ffffff;
+  border: 1px solid #dcd7cb;
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.field {
+  margin-bottom: 22px;
+}
+
+.field label {
+  display: block;
+  font-family: "Manrope", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #f4f3ed;
+  border: 1px solid #dcd7cb;
+  border-radius: 8px;
+  font-size: 14.5px;
+  transition: border-color 0.25s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #87917a;
+}
+
+.field-error {
+  display: block;
+  min-height: 18px;
+  margin-top: 5px;
+  font-size: 12.5px;
+  color: #a63a2b;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: #87917a;
+  color: #ffffff;
+  border-radius: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.submit-btn:hover {
+  background-color: #6e7862;
+}
+
+.form-notice {
+  margin-top: 16px;
+  font-size: 13.5px;
+  color: #252d28;
+  background-color: #e5e1d7;
+  border-radius: 8px;
+  display: none;
+}
+
+.form-notice.is-visible {
+  display: block;
+  padding: 14px 16px;
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+.site-footer {
+  background-color: #252d28;
+  color: #f4f3ed;
+  padding: 72px 0 44px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(244, 243, 237, 0.14);
+}
+
+.footer-brand {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-brand span {
+  color: #87917a;
+}
+
+.footer-statement {
+  font-size: 14.5px;
+  color: #b9bcaf;
+}
+
+.footer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 24px;
+  font-family: "Manrope", sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.footer-socials a:hover {
+  color: #87917a;
+}
+
+.back-top-btn {
+  padding: 9px 16px;
+  border: 1px solid rgba(185, 188, 175, 0.35);
+  border-radius: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #f4f3ed;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.back-top-btn:hover {
+  border-color: #87917a;
+  background-color: #87917a;
+}
+
+.footer-legal {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 24px;
+  font-size: 12.5px;
+  color: #9da49e;
+}
+
+/* ==========================================================================
+   10. MODAL CHI TIẾT DỰ ÁN
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 120;
+  background-color: rgba(23, 27, 24, 0.72);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal-backdrop.is-open {
+  display: flex;
+}
+
+.modal-panel {
+  background-color: #f4f3ed;
+  color: #252d28;
+  border: 1px solid #dcd7cb;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 86vh;
+  overflow-y: auto;
+  padding: 44px;
+  position: relative;
+}
+
+.modal-close {
+  float: right;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5c655f;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.modal-close:hover {
+  color: #252d28;
+}
+
+.modal-kicker {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #87917a;
+  margin-bottom: 10px;
+}
+
+.modal-heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.22;
+  margin-bottom: 28px;
+}
+
+.modal-block {
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top: 1px solid #dcd7cb;
+}
+
+.modal-block h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #87917a;
+  margin-bottom: 6px;
+}
+
+.modal-block p {
+  font-size: 15px;
+  color: #5c655f;
+}
+
+/* ==========================================================================
+   11. RESPONSIVE (TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 960px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .section {
+    padding: 92px 0;
+  }
+
+  .hero-name {
+    font-size: 56px;
+  }
+
+  .hero-layout,
+  .about-layout,
+  .skills-columns,
+  .journey-layout,
+  .contact-layout,
+  .work-lead {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .hero-portrait {
+    justify-self: start;
+    max-width: 360px;
+  }
+
+  .work-media {
+    border-right: none;
+    border-bottom: 1px solid #dcd7cb;
+    min-height: 240px;
+  }
+
+  .journey-sticky {
+    position: static;
+  }
+
+  .works-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .section {
+    padding: 76px 0;
+  }
+
+  .section-heading {
+    font-size: 34px;
+  }
+
+  .hero-name {
+    font-size: 46px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #f4f3ed;
+    border-bottom: 1px solid #dcd7cb;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px 32px;
+    gap: 18px;
+    display: none;
+  }
+
+  .nav.is-open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .btn-cv {
+    padding: 8px 14px;
+    font-size: 12.5px;
+  }
+
+  .hero {
+    padding: 56px 0 84px;
+  }
+
+  .hero-portrait {
+    max-width: 100%;
+  }
+
+  .portrait-frame {
+    height: 400px;
+  }
+
+  .facts-strip {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ledger-list li {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ledger-note {
+    text-align: left;
+  }
+
+  .works-secondary-row {
+    grid-template-columns: 1fr;
+  }
+
+  .work-content,
+  .contact-form,
+  .modal-panel {
+    padding: 28px 22px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+  }
+
+  .footer-actions {
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================================================
+   BỔ SUNG: không bị menu che tiêu đề + viền focus khi dùng bàn phím
+   ========================================================================== */
+main,
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #87917a;
+  outline-offset: 3px;
+}
